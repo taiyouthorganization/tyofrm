@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feedback – Submission Portal</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <img class="logo" src="https://taiyouth.org/wp-content/uploads/2023/03/android-chrome-512x512-1.png" alt="Logo" />
+  <div class="glass-panel">
+    <label id="languageLabel">Language</label>
+    <select id="languageToggle">
+      <option value="en">English</option>
+      <option value="my">မြန်မာ</option>
+      <option value="shn">လိၵ်ႈတႆး</option>
+    </select>
+
+    <label id="submissionLabel">Type of Submission</label>
+    <select id="submissionSelect"></select>
+
+    <h2 id="ctaText">Share your truth anonymously</h2>
+    <form id="feedbackForm" action="https://formspree.io/f/manpzbyr" method="POST">
+      <input type="text" name="message" id="userInput" placeholder="Your message..." required />
+      <input type="text" name="_gotcha" id="honeypot" style="display:none" />
+      <button id="submitBtn" type="submit">Submit</button>
+    </form>
+    <p id="confirmationMsg" style="display:none"></p>
+    <p id="errorMsg" style="display:none"></p>
+  </div>
+
+  <div class="toggle-switch" onclick="toggleTheme()">
+    <div class="toggle-knob"></div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
